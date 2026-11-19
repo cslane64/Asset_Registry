@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace AssetRegistry.Models;
+
+public partial class Asset
+{
+    public string? AssetId { get; set; }
+
+    public int AssetTypeId { get; set; }
+
+    public string? MakeAndModel { get; set; }
+
+    public string? SerialNumber { get; set; }
+
+    public string? Hostname { get; set; }
+
+    public string? OperatingSystem { get; set; }
+
+    public int? AssignedUserId { get; set; }
+
+    public int? LocationId { get; set; }
+
+    public int? CriticalityId { get; set; }
+
+    public DateOnly? WarrantyOrEndOfSupport { get; set; }
+
+    public int? StatusId { get; set; }
+
+    public DateOnly? LastVerified { get; set; }
+
+    public string? Notes { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
+
+    public virtual AssetType AssetType { get; set; } = null!;
+
+    public virtual User? AssignedUser { get; set; }
+
+    public virtual BusinessCriticality? Criticality { get; set; }
+
+    public virtual Location? Location { get; set; }
+
+    public virtual AssetStatus? Status { get; set; }
+}

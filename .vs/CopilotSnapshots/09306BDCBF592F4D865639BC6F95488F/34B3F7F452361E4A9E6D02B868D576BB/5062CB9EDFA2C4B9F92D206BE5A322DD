@@ -1,0 +1,111 @@
+﻿@model AssetRegistry.Models.Asset
+
+@{
+    ViewData["Title"] = "Edit Asset";
+}
+
+<h1>Edit Asset</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" asp-route-id="@Model.AssetId" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="AssetId" />
+            <input type="hidden" asp-for="CreatedAt" />
+            <input type="hidden" asp-for="UpdatedAt" />
+
+            <div class="mb-3">
+                <label asp-for="AssetTypeId" class="form-label"></label>
+                <select asp-for="AssetTypeId" asp-items="ViewBag.AssetTypeId" class="form-select"></select>
+                <span asp-validation-for="AssetTypeId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="MakeAndModel" class="form-label"></label>
+                <input asp-for="MakeAndModel" class="form-control" />
+                <span asp-validation-for="MakeAndModel" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="SerialNumber" class="form-label"></label>
+                <input asp-for="SerialNumber" class="form-control" />
+                <span asp-validation-for="SerialNumber" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Hostname" class="form-label"></label>
+                <input asp-for="Hostname" class="form-control" />
+                <span asp-validation-for="Hostname" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="OperatingSystem" class="form-label"></label>
+                <input asp-for="OperatingSystem" class="form-control" />
+                <span asp-validation-for="OperatingSystem" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="AssignedUserId" class="form-label"></label>
+                <select asp-for="AssignedUserId" asp-items="ViewBag.AssignedUserId" class="form-select">
+                    <option value="">-- Unassigned --</option>
+                </select>
+                <span asp-validation-for="AssignedUserId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LocationId" class="form-label"></label>
+                <select asp-for="LocationId" asp-items="ViewBag.LocationId" class="form-select">
+                    <option value="">-- None --</option>
+                </select>
+                <span asp-validation-for="LocationId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CriticalityId" class="form-label"></label>
+                <select asp-for="CriticalityId" asp-items="ViewBag.CriticalityId" class="form-select">
+                    <option value="">-- None --</option>
+                </select>
+                <span asp-validation-for="CriticalityId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="WarrantyOrEndOfSupport" class="form-label"></label>
+                <input asp-for="WarrantyOrEndOfSupport" type="date" class="form-control" />
+                <span asp-validation-for="WarrantyOrEndOfSupport" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="StatusId" class="form-label"></label>
+                <select asp-for="StatusId" asp-items="ViewBag.StatusId" class="form-select">
+                    <option value="">-- None --</option>
+                </select>
+                <span asp-validation-for="StatusId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LastVerified" class="form-label"></label>
+                <input asp-for="LastVerified" type="date" class="form-control" />
+                <span asp-validation-for="LastVerified" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Notes" class="form-label"></label>
+                <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

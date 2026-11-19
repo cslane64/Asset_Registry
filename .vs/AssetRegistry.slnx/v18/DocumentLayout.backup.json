@@ -1,0 +1,217 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\views\\assets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:views\\assets\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ChristopherLane\\AppData\\Roaming\\Microsoft\\UserSecrets\\fd99436d-f172-45c7-bb4e-5290a127c699\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\assetregistry.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:assetregistry.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\data\\yourdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:data\\yourdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|c:\\users\\christopherlane\\source\\repos\\assetregistry\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00A6F8E9-CD7E-383F-33A3-D69EFC9F9E80}|AssetRegistry.csproj|solutionrelative:controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AssetsController.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "Controllers\\AssetsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-19T13:35:56.032Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Assets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Create.cshtml",
+              "RelativeToolTip": "Views\\Assets\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-19T13:20:34.555Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-19T13:16:59.863Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Assets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Index.cshtml",
+              "RelativeToolTip": "Views\\Assets\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-19T13:11:58.872Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Models\\Asset.cs",
+              "RelativeDocumentMoniker": "Models\\Asset.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Models\\Asset.cs",
+              "RelativeToolTip": "Models\\Asset.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-19T13:23:40.695Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "YourDatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Data\\YourDatabaseContext.cs",
+              "RelativeDocumentMoniker": "Data\\YourDatabaseContext.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Data\\YourDatabaseContext.cs",
+              "RelativeToolTip": "Data\\YourDatabaseContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-19T13:23:40.754Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Assets\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Assets\\Delete.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-19T12:48:50.442Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Assets\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\Views\\Assets\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Assets\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-19T12:17:07.084Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-19T11:52:05.112Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetRegistry",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\AssetRegistry.csproj",
+              "RelativeDocumentMoniker": "AssetRegistry.csproj",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\AssetRegistry\\AssetRegistry.csproj",
+              "RelativeToolTip": "AssetRegistry.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-19T11:47:47.348Z",
+              "EditorCaption": "",
+              "OwnerCaption": "AssetRegistry"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\AppData\\Roaming\\Microsoft\\UserSecrets\\fd99436d-f172-45c7-bb4e-5290a127c699\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\fd99436d-f172-45c7-bb4e-5290a127c699\\secrets.json",
+              "ToolTip": "C:\\Users\\ChristopherLane\\AppData\\Roaming\\Microsoft\\UserSecrets\\fd99436d-f172-45c7-bb4e-5290a127c699\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\fd99436d-f172-45c7-bb4e-5290a127c699\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-19T11:44:38.469Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AssetRegistry.Models.Asset>
+
+@{
+    ViewData["Title"] = "Assets";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Asset Registry</h1>
+    <a asp-controller="Assets" asp-action="Create" class="btn btn-success" title="Create">
+        ➕ Create
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-light">
+            <tr>
+                <th>Asset ID</th>
+                <th>Type</th>
+                <th>Hostname</th>
+                <th>Assigned User</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Last Verified</th>
+                <th class="text-nowrap">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.AssetId</td>
+                    <td>@item.AssetType.AssetTypeName</td>
+                    <td>@item.Hostname</td>
+                    <td>@(item.AssignedUser is null ? "-" : $"{item.AssignedUser.LastName}, {item.AssignedUser.FirstName}")</td>
+                    <td>@item.Location?.LocationName</td>
+                    <td>@item.Status?.StatusName</td>
+                    <td>@item.LastVerified?.ToString("yyyy-MM-dd")</td>
+                    <td class="text-nowrap">
+                        <a asp-controller="Assets" asp-action="Details" asp-route-id="@item.AssetId" class="btn btn-sm btn-outline-secondary" title="Details">👁️</a>
+                        <a asp-controller="Assets" asp-action="Edit" asp-route-id="@item.AssetId" class="btn btn-sm btn-outline-primary" title="Edit">✏️</a>
+                        <a asp-controller="Assets" asp-action="Delete" asp-route-id="@item.AssetId" class="btn btn-sm btn-outline-danger" title="Delete">🗑️</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

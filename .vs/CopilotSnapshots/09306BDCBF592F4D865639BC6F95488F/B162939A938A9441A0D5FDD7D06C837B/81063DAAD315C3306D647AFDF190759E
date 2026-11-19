@@ -1,0 +1,140 @@
+﻿@model IEnumerable<AssetRegistry.Models.Asset>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table assets-grid">
+    <thead> 
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MakeAndModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SerialNumber)
+            </th>
+        <!--<th>
+                @Html.DisplayNameFor(model => model.Hostname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperatingSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedUserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriticalityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WarrantyOrEndOfSupport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastVerified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Criticality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th> -->
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.AssetTypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.MakeAndModel)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.SerialNumber)
+            </td>
+        <!--<td>
+                @Html.DisplayFor(model => item.Hostname)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.OperatingSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.AssignedUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.WarrantyOrEndOfSupport)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.StatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LastVerified)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.AssetType)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.AssignedUser)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Criticality)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Status)
+            </td> -->
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AssetId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AssetId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AssetId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

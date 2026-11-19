@@ -1,0 +1,207 @@
+﻿using AssetRegistry.Data;
+using AssetRegistry.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+
+namespace AssetRegistry.Controllers;
+
+public class AssetsController : Controller
+{
+    private const int DeletedStatusId = 4;
+    private readonly YourDatabaseContext _context;
+
+    public AssetsController(YourDatabaseContext context)
+    {
+        _context = context;
+    }
+
+    // GET: Assets
+    public async Task<IActionResult> Index()
+    {
+        var assets = await _context.Assets
+            .AsNoTracking()
+            .Include(a => a.AssetType)
+            .Include(a => a.AssignedUser)
+            .Include(a => a.Location)
+            .Include(a => a.Criticality)
+            .Include(a => a.Status)
+            .Where(a => !a.StatusId.HasValue || a.StatusId != DeletedStatusId)
+            .OrderBy(a => a.AssetId)
+            .ToListAsync();
+
+        return View(assets);
+    }
+
+    // GET: Assets/Details/5
+    public async Task<IActionResult> Details(string? id)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+            return NotFound();
+
+        var asset = await _context.Assets
+            .AsNoTracking()
+            .Include(a => a.AssetType)
+            .Include(a => a.AssignedUser)
+            .Include(a => a.Location)
+            .Include(a => a.Criticality)
+            .Include(a => a.Status)
+            .FirstOrDefaultAsync(m => m.AssetId == id);
+
+        if (asset == null)
+            return NotFound();
+
+        return View(asset);
+    }
+
+    // GET: Assets/Create
+    public IActionResult Create()
+    {
+        PopulateLookups();
+        return View();
+    }
+
+    // POST: Assets/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create([Bind("AssetTypeId,MakeAndModel,SerialNumber,Hostname,OperatingSystem,AssignedUserId,LocationId,CriticalityId,WarrantyOrEndOfSupport,StatusId,LastVerified,Notes")] Asset asset)
+    {
+        if (!ModelState.IsValid)
+        {
+            PopulateLookups(asset.AssetTypeId, asset.AssignedUserId, asset.LocationId, asset.CriticalityId, asset.StatusId);
+            return View(asset);
+        }
+
+        _context.Add(asset);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    // GET: Assets/Edit/5
+    public async Task<IActionResult> Edit(string? id)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+            return NotFound();
+
+        var asset = await _context.Assets.FindAsync(id);
+        if (asset == null)
+            return NotFound();
+
+        PopulateLookups(asset.AssetTypeId, asset.AssignedUserId, asset.LocationId, asset.CriticalityId, asset.StatusId);
+        return View(asset);
+    }
+
+    // POST: Assets/Edit/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(string id, [Bind("AssetId,AssetTypeId,MakeAndModel,SerialNumber,Hostname,OperatingSystem,AssignedUserId,LocationId,CriticalityId,WarrantyOrEndOfSupport,StatusId,LastVerified,Notes")] Asset asset)
+    {
+        if (id != asset.AssetId)
+            return NotFound();
+
+        if (!ModelState.IsValid)
+        {
+            PopulateLookups(asset.AssetTypeId, asset.AssignedUserId, asset.LocationId, asset.CriticalityId, asset.StatusId);
+            return View(asset);
+        }
+
+        var existingAsset = await _context.Assets.FindAsync(id);
+        if (existingAsset == null)
+            return NotFound();
+
+        existingAsset.AssetTypeId = asset.AssetTypeId;
+        existingAsset.MakeAndModel = asset.MakeAndModel;
+        existingAsset.SerialNumber = asset.SerialNumber;
+        existingAsset.Hostname = asset.Hostname;
+        existingAsset.OperatingSystem = asset.OperatingSystem;
+        existingAsset.AssignedUserId = asset.AssignedUserId;
+        existingAsset.LocationId = asset.LocationId;
+        existingAsset.CriticalityId = asset.CriticalityId;
+        existingAsset.WarrantyOrEndOfSupport = asset.WarrantyOrEndOfSupport;
+        existingAsset.StatusId = asset.StatusId;
+        existingAsset.LastVerified = asset.LastVerified;
+        existingAsset.Notes = asset.Notes;
+        existingAsset.UpdatedAt = DateTime.UtcNow;
+
+        try
+        {
+            var rowsAffected = await _context.SaveChangesAsync();
+            if (rowsAffected == 0)
+            {
+                ModelState.AddModelError(string.Empty, "No database changes were saved.");
+                PopulateLookups(asset.AssetTypeId, asset.AssignedUserId, asset.LocationId, asset.CriticalityId, asset.StatusId);
+                return View(asset);
+            }
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!AssetExists(asset.AssetId))
+                return NotFound();
+
+            throw;
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
+
+    // GET: Assets/Delete/5
+    public async Task<IActionResult> Delete(string? id)
+    {
+        if (string.IsNullOrWhiteSpace(id))
+            return NotFound();
+
+        var asset = await _context.Assets
+            .AsNoTracking()
+            .Include(a => a.AssetType)
+            .Include(a => a.AssignedUser)
+            .Include(a => a.Location)
+            .Include(a => a.Criticality)
+            .Include(a => a.Status)
+            .FirstOrDefaultAsync(m => m.AssetId == id);
+
+        if (asset == null)
+            return NotFound();
+
+        return View(asset);
+    }
+
+    // POST: Assets/Delete/5 (soft delete)
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(string id)
+    {
+        var asset = await _context.Assets.FindAsync(id);
+        if (asset == null)
+            return RedirectToAction(nameof(Index));
+
+        asset.StatusId = DeletedStatusId;
+        asset.UpdatedAt = DateTime.UtcNow;
+
+        var rowsAffected = await _context.SaveChangesAsync();
+        if (rowsAffected == 0)
+        {
+            TempData["AssetDeleteError"] = "No database changes were saved.";
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
+
+    private bool AssetExists(string id)
+    {
+        return _context.Assets.Any(e => e.AssetId == id);
+    }
+
+    private void PopulateLookups(
+        int? selectedAssetTypeId = null,
+        int? selectedAssignedUserId = null,
+        int? selectedLocationId = null,
+        int? selectedCriticalityId = null,
+        int? selectedStatusId = null)
+    {
+        ViewData["AssetTypeId"] = new SelectList(_context.AssetTypes.AsNoTracking().OrderBy(x => x.AssetTypeName), "AssetTypeId", "AssetTypeName", selectedAssetTypeId);
+        ViewData["AssignedUserId"] = new SelectList(_context.Users.AsNoTracking().OrderBy(x => x.LastName).ThenBy(x => x.FirstName), "UserId", "LastName", selectedAssignedUserId);
+        ViewData["LocationId"] = new SelectList(_context.Locations.AsNoTracking().OrderBy(x => x.LocationName), "LocationId", "LocationName", selectedLocationId);
+        ViewData["CriticalityId"] = new SelectList(_context.BusinessCriticalities.AsNoTracking().OrderBy(x => x.CriticalityName), "CriticalityId", "CriticalityName", selectedCriticalityId);
+        ViewData["StatusId"] = new SelectList(_context.AssetStatuses.AsNoTracking().OrderBy(x => x.StatusName), "StatusId", "StatusName", selectedStatusId);
+    }
+}
